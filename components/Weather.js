@@ -63,10 +63,12 @@ const styles = StyleSheet.create({
 
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        width: '100%',
+        width: '90%',
         height: '90%',
         alignItems: 'center',
-        paddingTop: Constants.statusBarHeight
+        paddingTop: Constants.statusBarHeight,
+        borderWidth: 2,
+        borderRadius: 10 
     },
 
     textStyle: {
