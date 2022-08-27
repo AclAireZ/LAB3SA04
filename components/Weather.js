@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         width: '100%',
-        height: '37%',
+        height: '45%',
         alignItems: 'center',
         paddingTop: Constants.statusBarHeight
     },
