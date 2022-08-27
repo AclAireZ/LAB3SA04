@@ -9,7 +9,8 @@ export default function weather(props){
         main: 'main',
         description: 'description',
         temp: 0,
-        pressure: 0
+        pressure: 0,
+        humidity: 0
     })
 
      useEffect(() => {
@@ -22,7 +23,8 @@ export default function weather(props){
                         main: json.weather[0].main,
                         description: json.weather[0].description,
                         temp: json.main.temp,
-                        pres: json.main.pressure
+                        pres: json.main.pressure,
+                        humidity: json.main.humidity
                     });
                 })
                 .catch((error) => {
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         width: '100%',
-        height: '55%',
+        height: '65%',
         alignItems: 'center',
         paddingTop: Constants.statusBarHeight
     },

@@ -19,6 +19,10 @@ export default function Forecast(props) {
                 <Text style = {styles.textM0}>{props.pres} Pascal</Text>
             </View>
 
+            <View View style = {styles.container}>
+                <Text style = {styles.textM0}>{props.humidity} %</Text>
+            </View>
+
         </View>
     );
 
