@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react"
 import { Text, ImageBackground, StyleSheet, View } from "react-native"
 import Forecast from "./Forecast";
 import Constants from 'expo-constants'
+import { JumpingTransition } from "react-native-reanimated";
 
 export default function weather(props){
     const [forecastInfo , setForecastInfo] = useState({
         main: 'main',
         description: 'description',
-        temp: 0
+        temp: 0,
+        pressure: 0
     })
 
      useEffect(() => {
@@ -19,7 +21,8 @@ export default function weather(props){
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
-                        temp: json.main.temp
+                        temp: json.main.temp,
+                        pres: json.main.pressure
                     });
                 })
                 .catch((error) => {
@@ -53,7 +56,7 @@ const styles = StyleSheet.create({
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         width: '100%',
-        height: '45%',
+        height: '55%',
         alignItems: 'center',
         paddingTop: Constants.statusBarHeight
     },
