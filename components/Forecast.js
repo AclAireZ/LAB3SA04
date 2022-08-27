@@ -20,6 +20,10 @@ export default function Forecast(props) {
             </View>
 
             <View View style = {styles.container}>
+                <Text style = {styles.textM0}>max: {props.temp2}°C</Text>
+            </View>
+
+            <View View style = {styles.container}>
                 <Text style = {styles.textM0}>{props.pres} Pascal</Text>
             </View>
 

@@ -12,6 +12,7 @@ export default function weather(props){
         pressure: 0,
         humidity: 0,
         temp_min: 0,
+        temp_max: 0
         
     })
 
@@ -26,6 +27,7 @@ export default function weather(props){
                         description: json.weather[0].description,
                         temp: json.main.temp,
                         temp1: json.main.temp_min,
+                        temp2: json.main.temp_max,
                         pres: json.main.pressure,
                         humidity: json.main.humidity,
             
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
     highlight: {
         backgroundColor: 'rgba(0, 0, 0, 0.5)',
         width: '100%',
-        height: '75%',
+        height: '90%',
         alignItems: 'center',
         paddingTop: Constants.statusBarHeight
     },
